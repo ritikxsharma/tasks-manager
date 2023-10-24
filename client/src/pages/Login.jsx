@@ -1,11 +1,11 @@
 import '../styles/pages/_login_register.scss'
 import Spinner from '../components/Loading/Spinner'
 import React, { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 
 const Login = () => {
-
+    
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [isLoading, setIsLoading] = useState(false)
@@ -101,7 +101,7 @@ const Login = () => {
                     }
                 </button>
                 <div className="new-user">
-                    <p>New User?</p><a href="/register">Register here</a>
+                    <p>New User?</p><Link to="/register">Register here</Link>
                 </div>
                 <div className="demo-account">
                     <p>Demo Account</p>

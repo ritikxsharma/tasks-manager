@@ -4,7 +4,7 @@ import '../styles/pages/_login_register.scss'
 import Spinner from '../components/Loading/Spinner'
 import { useDispatch, useSelector } from 'react-redux'
 import { startLoading, stopLoading } from "../redux/actions/loadingActions";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Register = () => {
 
@@ -124,7 +124,7 @@ const Register = () => {
                     }
                 </button>
                 <div className="old-user">
-                    <p>Already a User?</p><a href="/login">Login</a>
+                    <p>Already a User?</p><Link to="/login">Login</Link>
                 </div>
             </form>
         </div>
