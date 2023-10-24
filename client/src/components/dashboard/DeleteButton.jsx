@@ -12,7 +12,7 @@ const DeleteButton = ({id}) => {
   const handleDelete = async() =>{
     dispatch(startLoading())
     try {
-      const res = await fetch(`http://localhost:5000/api/task/${id}`, {
+      const res = await fetch(`https://tasks-manager-server-2909.onrender.com/api/task/${id}`, {
         method: 'DELETE',
         headers:{
           'Content-Type': 'application/json',
