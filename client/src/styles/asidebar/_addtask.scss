@@ -1,0 +1,113 @@
+.add-user-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading{
+        height: 10%;
+        text-align: center;
+        color: #007bff;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .details{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        form{
+            width: max(500px, 80%);
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+    
+            .form-group{
+                position: relative;
+                width: 60%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                &#status{
+                    display: flex;
+                    gap: 1rem;
+                    
+                    label{
+                        position: relative;
+                        display: flex;
+    
+                        &:nth-child(n+2){
+                            font-weight: 400;
+                            gap: 5px;
+                        }
+    
+                        input{
+                            width: 1rem;
+                        }
+                    }
+                }
+    
+                label{
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #333;
+                    left: 5px;
+                    transition: all 0.3s ease-in-out;
+                }
+    
+                input,
+                textarea{
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    width: 100%;
+    
+                    &:focus + label,
+                    &:not(:placeholder-shown) + label{
+                        transform: translateY(-30px);
+                        transition: all 0.3s ease-in-out;
+                        font-size: 14px;
+                    }
+                }
+                textarea:focus + label,
+                textarea:not(:placeholder-shown) + label{
+                    transform: translateY(-40px);
+                    transition: all 0.3s ease-in-out;
+                    font-size: 14px;
+                }
+            }
+    
+            button{
+                width: 200px;
+                height: 40px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+    
+                &:hover{
+                    background-color: #0056b3;
+                }
+    
+                &:disabled{
+                    background-color: #747070;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+    }
+}
